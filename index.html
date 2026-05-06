@@ -14,7 +14,8 @@
               <a href="/">
               <img class="header_img-logo" src="./Images/Снимок_экрана_2026-02-23_в_15.51.52-removebg-preview.png" alt="logo">
               </a>
-              <p class="header_text">Vroves</p>
+              <a href="/" class="header_text">Vroves</a>
+
             </div>
 
             <nav class="header__nav">
@@ -61,7 +62,9 @@
       </section>
     </main>
 
+
     <button id="scrollTopBtn" class="scroll-top">↑</button>
+    
 
     <section id="services" class="services">
     <div class="container">
@@ -204,7 +207,9 @@
 <footer class="footer">
     <div class="container">
       <div class="footer__contacts">
-        <img src="./Images/Снимок_экрана_2026-02-23_в_15.51.52-removebg-preview.png" alt="logo" class="footer__logo">
+        <a href="/">
+              <img class="header_img-logo" src="./Images/Снимок_экрана_2026-02-23_в_15.51.52-removebg-preview.png" alt="logo">
+              </a>
         <a class="footer__link footer__link-mail" href="mailto:support@vroves.com">support@vroves.com</a>
       </div>
       <nav class="footer__nav">
@@ -213,9 +218,9 @@
             <a class="footer__title" href="/#services">Products</a>
             <ul class="footer__inner-list">
               <li class="footer__list-item"><a href="Transcoder.html">OTT/Transcoder</a></li>
-              <li class="footer__list-item"><a href="/Video Analysis.html">Video Analysis</a></li>
-              <li class="footer__list-item"><a href="/Watermarking.html">Watermarking</a></li>
-              <li class="footer__list-item"><a href="/AI ML.html">AI/ML</a></li>
+              <li class="footer__list-item"><a href="VideoAnalysis.html">Video Analysis</a></li>
+              <li class="footer__list-item"><a href="Watermarking.html">Watermarking</a></li>
+              <li class="footer__list-item"><a href="AIML.html">AI/ML</a></li>
               
             </ul>
           </li>
@@ -248,26 +253,30 @@
   </footer>
 
 <script>
+
 const btn = document.getElementById("scrollTopBtn");
-const welcome = document.getElementById("welcome");
+const services = document.getElementById("services");
+const productsLink = document.querySelector('a[href="#services"]');
+
+let clickedProducts = false;
+
+productsLink.addEventListener("click", function () {
+  clickedProducts = true;
+  btn.classList.add("show");
+});
 
 window.addEventListener("scroll", function () {
+  const triggerPoint = services.offsetTop;
 
-  const triggerPoint = welcome.offsetTop + welcome.offsetHeight;
-
-  if (window.scrollY > triggerPoint) {
+  if (clickedProducts || window.scrollY > triggerPoint) {
     btn.classList.add("show");
   } else {
     btn.classList.remove("show");
   }
-
 });
 
 btn.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 </script>
 
