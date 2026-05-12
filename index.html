@@ -41,7 +41,7 @@
          <div class="title">
            <p class="main-title">Advanced Video Technology Solutions</p>
            <h1 class="main-text">Professional <br> Video Processing & <br> Analytics</h1>
-           <p class="main-goal-text">Customer satisfaction is our main goal. We always deliver high quality solution in time</p>         
+           <p class="main-goal-text">Customer satisfaction is our main goal. We always deliver high quality solution in time</p>
            <a href="mailto:support@vroves.com" class="btn mobile-only-btn">Get Consultation <span class="email-hint">(support@vroves.com)</span></a>        
           </div>
 
@@ -186,24 +186,20 @@
 </section>
 
 
-    <section id="section" class="section">
-        <div class="container">
-            <p class="section__text">Vroves, founded in 2016, as a research and development company</p>
-        </div>
-    </section>
-
-<section class="info">
-   <div class="container">
-     <div class="container__text">
-       <p class="info__text">At the beginning our focus was outsourcing in all possible areas of the software developments fields. We are an agile company. Customers satisfaction is our main goal. We always deliver high quality solution to the customers. Our team is distributed around the globe what allows us to work nearly 24/7. We have teammates at the following locations:</p>
-        </div>
-        <img src="./Images/play-button-media-player-podcast-graphic.jpg" alt="img" class="info__img">
-     </div>
-   </div>
+<section id="section" class="section">
+  <div class="container">
+    <p class="section__text">Vroves, founded in 2016, as a research and development company</p>
+  </div>
 </section>
 
-
-
+<section class="info">
+  <div class="container">
+    <div class="container__text">
+      <p class="info__text">At the beginning our focus was outsourcing in all possible areas of the software developments fields. We are an agile company. Customers satisfaction is our main goal. We always deliver high quality solution to the customers. Our team is distributed around the globe what allows us to work nearly 24/7. We have teammates at the following locations:</p>
+    </div>
+    <img src="./Images/play-button-media-player-podcast-graphic.jpg" alt="img" class="info__img">
+  </div>
+</section>
 
 <footer class="footer">
     <div class="container">
@@ -212,6 +208,7 @@
               <img class="header_img-logo" src="./Images/Logo.png" alt="logo">
               </a>
         <a class="footer__link footer__link-mail" href="mailto:support@vroves.com">support@vroves.com</a>
+
           <div class="footer__socials-mobile">
           <p class="footer__title">Social networks</p>
           <div style="display:flex; gap:10px;">
@@ -270,10 +267,10 @@ const productsLink = document.querySelector('a[href="#services"]');
 let clickedProducts = false;
 
 if (productsLink) { // ← добавь эту проверку
-productsLink.addEventListener("click", function () {
-  clickedProducts = true;
-  btn.classList.add("show");
-});
+  productsLink.addEventListener("click", function () {
+    clickedProducts = true;
+    btn.classList.add("show");
+  });
 }
 
 window.addEventListener("scroll", function () {
