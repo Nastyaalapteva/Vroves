@@ -59,6 +59,36 @@
 </div>
 
 
+<script>
+const btn = document.getElementById("scrollTopBtn");
+const services = document.getElementById("services");
+const productsLink = document.querySelector('a[href="#services"]');
+
+let clickedProducts = false;
+
+if (productsLink) { // ← добавь эту проверку
+  productsLink.addEventListener("click", function () {
+    clickedProducts = true;
+    btn.classList.add("show");
+  });
+}
+
+window.addEventListener("scroll", function () {
+  if (!services) return; // ← защита если services тоже нет на странице
+  const triggerPoint = services.offsetTop;
+
+  if (clickedProducts || window.scrollY > triggerPoint) {
+    btn.classList.add("show");
+  } else {
+    btn.classList.remove("show");
+  }
+});
+
+btn.addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+</script>
 
 
 
