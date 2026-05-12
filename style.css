@@ -166,7 +166,7 @@ html, body {
   
   border-radius: 30px;
   max-width: 100%;
-  padding: 60px 15px;
+  padding: 0 15px 60px;
 }
 
 .section__text {
@@ -217,18 +217,6 @@ html, body {
   padding-bottom: 30px;
 }
 
-.tech-grid {
- display: grid;
- grid-template-columns: 1fr 1fr; /* 2 колонки */
- gap: 20px 40px; /* расстояние: строки / колонки */
-}
-
-.tech-item {
- background-color: #8f939c; /* серый как у тебя */
-  padding: 20px;
-  border-radius: 8px;
-  color: #000;
-}
 
 
 .tech__how {
@@ -495,7 +483,7 @@ html, body {
 
 /* feedback */
 .feedback {
-  padding-top: 100px;
+  padding-top: 30px;
   
 }
 
@@ -575,13 +563,6 @@ html, body {
   line-height: 1.5;
 }
 
-.why-choose-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px 40px;
- 
-}
-
 .why-choose-item-text {
   font-size: 16px;
 }
@@ -609,8 +590,8 @@ html, body {
 
 
 .footer {
-  padding-top: 120px;
-  padding-bottom: 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #050916;
   opacity: 0.7;
   width: 100%;
@@ -683,6 +664,7 @@ html, body {
 
 .footer__list-title {
  list-style: none;
+ 
 }
 
 .footer__inner-list {
@@ -698,10 +680,14 @@ html, body {
  display: flex;
 }
 .footer__title {
-
+ 
 }
 .footer__socials-icon + .footer__socials-icon {
  margin-left: 8px;
+}
+
+.footer__list-title p {
+  margin: 0;
 }
 
 /* транскодер */
@@ -731,7 +717,7 @@ html, body {
 .description__content__Watermarking {
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
+  
 
 }
 
@@ -764,6 +750,7 @@ html, body {
   flex-shrink: 0;    /* чтобы не сжималась */
   
   
+  
 }
 
 .description__btn {
@@ -772,6 +759,29 @@ html, body {
   padding: 10px 15px;
   border-radius: 10px;
 
+}
+
+
+.description__container-Watermarking {
+  display: flex;        /* картинка + текст в ряд */
+  gap: 100px;
+  align-items: center;
+  max-width: 100%;
+  justify-content: center;
+
+  box-sizing: border-box;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-top: 260px;
+}
+
+.description__img-Watermarking {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover; /* добавь это */
+  padding-top: 0;    /* убери padding-top — он ломает форму круга */
+  flex-shrink: 0;    /* чтобы не сжималась */
 }
 
 .scroll-top {
@@ -809,8 +819,26 @@ html, body {
   display: none;
 }
 
+.mobile-only-btn {
+  display: none;
+}
+
+.footer__socials-mobile {
+  display: none;
+}
+
 /* ===== МОБИЛЬНАЯ ВЕРСИЯ (до 768px) ===== */
 @media (max-width: 768px) {
+
+  .header > .container > .btn {
+    display: none;
+  }
+
+  .mobile-only-btn {
+    display: inline-block;
+    margin-top: 8px;
+   
+  }
 
   /* Контейнер */
   .container {
@@ -880,10 +908,12 @@ html, body {
 
   /* Главный экран */
   .welcome {
-    padding-top: 140px;
+    
+    background-color: #000B2B;
+
+    min-height: auto; /* ← убирает принудительную высоту */
     padding-bottom: 40px;
-    background-position: center top;
-    background-size: cover;
+    
   }
 
   .welcome .container {
@@ -903,6 +933,7 @@ html, body {
   .main-goal-text {
     font-size: 14px;
     max-width: 55%;
+    padding-bottom: 0;
   }
 
   .stats {
@@ -910,14 +941,19 @@ html, body {
     flex-wrap: wrap;
   }
 
+  .wcu-lbs-block {
+    margin: auto;
+  }
+    
+
   /* Секция с фоном */
   .section .container {
-    padding: 40px 16px;
+    padding: 0 16px;
   }
 
   .section__text {
     font-size: 22px;
-    padding: 40px 0;
+    padding: 20px 0;
   }
 
   /* Info */
@@ -953,6 +989,7 @@ html, body {
 
   .services__text {
     font-size: 18px;
+    
   }
 
   .services__btn:active {
@@ -1018,37 +1055,85 @@ html, body {
   .description__container {
     flex-direction: column;
     gap: 30px;
-    padding-top: 100px;
+    padding-top: 120px;
     align-items: center;
   }
 
   .description__img {
     width: 260px;
     height: 260px;
-    padding-top: 0;
+    
   }
 
-  .description__content,
   .description__content__Watermarking,
   .description__content__Drivers,
   .description__content__Small {
     padding-top: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+  }
+
+    .description__content {
+    padding-top: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .description__title {
+    text-align: center;
+  }
+
+  .description__list {
+    padding-left: 16px;
+  }
+
+  .description__btn {
+    margin-bottom: 40px;
   }
 
   /* Footer */
-  .footer .container {
+    .footer .container {
     grid-template-columns: 1fr;
     gap: 32px;
+    padding: 30px 16px;
   }
 
   .footer__list {
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0;
+    gap: 16px;
+  }
+
+  .footer__list-title {
+    list-style: none;
   }
 
   .footer {
-    padding-top: 60px;
-
+    padding-top: 40px;
   }
+
+    /* Показываем под логотипом */
+  .footer__socials-mobile {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+    flex-direction: column; /* текст сверху, иконки снизу */
+  }
+
+   .footer__socials-mobile div {
+    display: flex;
+    flex-direction: row; /* иконки в ряд */
+    gap: 10px;
+  }
+  
+  /* Скрываем оригинальный блок соцсетей */
+  .footer__cocials {
+   display: none;
+  }
+
 }
 
 /* ===== ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ (до 480px) ===== */
