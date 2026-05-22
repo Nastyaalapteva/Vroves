@@ -49,7 +49,6 @@ html, body {
  justify-content: space-between;
  align-items: center;
  padding: 15px 0;
- 
 }
 
 .header__logo {
@@ -61,23 +60,18 @@ html, body {
 
 .header__nav {
  display: flex;
-
 }
 
 .header_img-logo {
- 
  width: 90px;
  height: 90px;
- 
 }
 
 .header_text {
  font-weight: 500;
  font-size: 24px;
-
  margin: 0;
  line-height: 1;
-
  transform: translateY(2px);
 }
 
@@ -104,9 +98,7 @@ html, body {
   background-color: #2168F8;
   padding: 15px 15px;
   border-radius: 5px;
-
 }
-
 
 /* main */
 
@@ -114,7 +106,7 @@ html, body {
   min-height: 100vh;
   display: flex;
   align-items: flex-start;
-  padding-top: 230px; /* только высота хедера */
+  padding-top: 230px;
   padding-bottom: 0;
 
   background-image: url(./Images/wangsina_333_03_2022_41.jpg);
@@ -132,8 +124,6 @@ html, body {
 .main-title {
  font-size: 16px;
  font-weight: 400;
- 
-
 }
 
 .main-text {
@@ -158,12 +148,11 @@ html, body {
 .item {
   font-size: 16px;
 }
+
 /* section */
 
 .section .container {
- 
   background-color: #010f2fb6;
-  
   border-radius: 30px;
   max-width: 100%;
   padding: 0 15px 60px;
@@ -178,13 +167,11 @@ html, body {
   font-weight: 400;
 }
 
-
 /* info */
 
 .info .container {
   display: flex;
   gap: 76px;
-  
 }
 
 .info__text {
@@ -203,9 +190,8 @@ html, body {
  height: 450px;
  border-radius: 25px;
  margin-top: -80px;
- object-fit: cover; /* добавь это — картинка не будет растягиваться */
+ object-fit: cover; 
 }
-
 
 /* tech */
 
@@ -216,8 +202,6 @@ html, body {
 .tech__text{
   padding-bottom: 30px;
 }
-
-
 
 .tech__how {
  margin-top: 40px;
@@ -233,13 +217,11 @@ html, body {
  font-size: 16px;
 }
 
-
 /* services */
 
 .services {
   overflow: hidden;
   padding: 20px 0;
-  
 }
 
 .services__card {
@@ -284,14 +266,12 @@ html, body {
  font-size: 28px;
  text-align: center;
  padding-top: 20px;
- 
 }
 
 .services__text {
  font-size: 24px;
  font-weight: 400;
  text-align: center;
-
 }
 
 .services__solutions {
@@ -317,7 +297,6 @@ html, body {
 
  margin-top: auto;
  align-self: flex-start;
- 
 }
 
 .services__btn:hover {
@@ -330,15 +309,14 @@ html, body {
 .wcu-section {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 0 15px; /* как у container */
+  padding: 0 15px; 
   box-sizing: border-box;
 }
 
 .wcu-header {
-  
   display: flex;
   align-items: center;
-  justify-content: center; /* было space-between */
+  justify-content: center; 
   margin-bottom: 48px;
   margin-top: 48px;
 }
@@ -350,8 +328,6 @@ html, body {
   color: #ffffff;
   margin: 0;
   letter-spacing: -0.5px;
- 
- 
 }
 
 
@@ -433,14 +409,12 @@ html, body {
   color: #ffffff;
   margin: 0;
   letter-spacing: -0.5px;
-  
 }
 
 
 .wcu-eng-text {
   font-size: 15px;
   color: #6b7685;
-
 }
 
 .wcu-lbs-label {
@@ -478,19 +452,10 @@ html, body {
   background: #3d5ce0;
 }
 
-/* ===== END ===== */
-
-
 /* feedback */
 .feedback {
   padding-top: 30px;
-  
 }
-
-.feedback .container {
-  
-}
-
 
 .feedback__title {
  text-align: center;
@@ -580,14 +545,9 @@ html, body {
 
 .engineering-headline {
   padding-top: 10px;
- 
-
 }
 
-
-
 /* Footer */
-
 
 .footer {
   padding-top: 50px;
@@ -620,9 +580,6 @@ html, body {
 .footer__contacts {
  display: flex;
  flex-direction: column;
-
- 
-
 }
 
 .footer__logo {
@@ -664,7 +621,6 @@ html, body {
 
 .footer__list-title {
  list-style: none;
- 
 }
 
 .footer__inner-list {
@@ -679,9 +635,7 @@ html, body {
 .footer__socials {
  display: flex;
 }
-.footer__title {
- 
-}
+
 .footer__socials-icon + .footer__socials-icon {
  margin-left: 8px;
 }
@@ -693,7 +647,7 @@ html, body {
 /* транскодер */
 
 .description__container {
-  display: flex;        /* картинка + текст в ряд */
+  display: flex;     
   gap: 100px;
   align-items: center;
   max-width: 100%;
@@ -703,22 +657,17 @@ html, body {
   max-width: 1170px;
   margin: 0 auto;
   padding-top: 150px;
-
-  
-  
 }
 
 .description__content {
   display: flex;
-  flex-direction: column; /* текст друг под другом */
+  flex-direction: column; 
   padding-top: 80px;
 }
 
 .description__content__Watermarking {
   display: flex;
   flex-direction: column;
-  
-
 }
 
 .description__content__Drivers {
@@ -731,13 +680,11 @@ html, body {
   display: flex;
   flex-direction: column;
   padding-top: 100px;
-  
 }
 
 .description__list {
   display: flex;
   flex-direction: column; 
-  
   flex-wrap: wrap; 
 }
 
@@ -745,12 +692,9 @@ html, body {
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  object-fit: cover; /* добавь это */
-  padding-top: 0;    /* убери padding-top — он ломает форму круга */
-  flex-shrink: 0;    /* чтобы не сжималась */
-  
-  
-  
+  object-fit: cover; 
+  padding-top: 0;   
+  flex-shrink: 0;   
 }
 
 .description__btn {
@@ -758,12 +702,11 @@ html, body {
   background-color: #3a73ec;
   padding: 10px 15px;
   border-radius: 10px;
-
 }
 
 
 .description__container-Watermarking {
-  display: flex;        /* картинка + текст в ряд */
+  display: flex;      
   gap: 100px;
   align-items: center;
   max-width: 100%;
@@ -779,9 +722,9 @@ html, body {
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  object-fit: cover; /* добавь это */
-  padding-top: 0;    /* убери padding-top — он ломает форму круга */
-  flex-shrink: 0;    /* чтобы не сжималась */
+  object-fit: cover;
+  padding-top: 0;   
+  flex-shrink: 0;   
 }
 
 .scroll-top {
@@ -814,7 +757,7 @@ html, body {
   pointer-events: auto;
 }
 
-/* На десктопе бургер скрыт */
+
 .burger {
   display: none;
 }
@@ -837,7 +780,6 @@ html, body {
   .mobile-only-btn {
     display: inline-block;
     margin-top: 8px;
-   
   }
 
   /* Контейнер */
@@ -847,7 +789,7 @@ html, body {
 
   /* Хедер */
   .header .container {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 12px;
     padding: 12px 16px;
   }
@@ -872,7 +814,7 @@ html, body {
     height: 60px;
   }
 
-  /* Бургер */
+  
   .burger {
     display: flex;
     flex-direction: column;
@@ -904,16 +846,15 @@ html, body {
     padding: 16px;
     border-radius: 8px;
     gap: 16px;
+
+    position: absolute;
+    z-index: 999;
   }
 
-  /* Главный экран */
   .welcome {
-    
     background-color: #000B2B;
-
-    min-height: auto; /* ← убирает принудительную высоту */
+    min-height: auto; 
     padding-bottom: 40px;
-    
   }
 
   .welcome .container {
@@ -922,7 +863,7 @@ html, body {
 
   .main-text {
     font-size: 28px;
-    max-width: 55%; /* текст занимает только левую половину */
+    max-width: 55%; 
   }
 
   .main-title {
@@ -945,8 +886,6 @@ html, body {
     margin: auto;
   }
     
-
-  /* Секция с фоном */
   .section .container {
     padding: 0 16px;
   }
@@ -978,7 +917,6 @@ html, body {
     font-size: 14px;
   }
 
-  /* Карточки сервисов */
   .services__solutions {
     grid-template-columns: 1fr 1fr;
   }
@@ -998,13 +936,10 @@ html, body {
   transition: all 0.1s ease;
 }
 
-
-  /* Tech grid */
   .tech-grid {
     grid-template-columns: 1fr;
   }
 
-  /* WHY COMPANIES CHOOSE US */
   .wcu-section {
     padding: 40px 16px;
   }
@@ -1092,6 +1027,10 @@ html, body {
     margin-bottom: 40px;
   }
 
+  .scroll-top {
+   display: none;
+  }
+
   /* Footer */
     .footer .container {
     grid-template-columns: 1fr;
@@ -1115,21 +1054,19 @@ html, body {
     padding-top: 40px;
   }
 
-    /* Показываем под логотипом */
   .footer__socials-mobile {
     display: flex;
     gap: 10px;
     margin-top: 12px;
-    flex-direction: column; /* текст сверху, иконки снизу */
+    flex-direction: column; 
   }
 
    .footer__socials-mobile div {
     display: flex;
-    flex-direction: row; /* иконки в ряд */
+    flex-direction: row; 
     gap: 10px;
   }
   
-  /* Скрываем оригинальный блок соцсетей */
   .footer__cocials {
    display: none;
   }
