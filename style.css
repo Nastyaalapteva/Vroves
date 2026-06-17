@@ -657,13 +657,14 @@ html, body {
   max-width: 1170px;
   margin: 0 auto;
   padding-top: 150px;
-  opacity: 70%;
+  
 }
 
 .description__content {
   display: flex;
   flex-direction: column; 
   padding-top: 80px;
+  
 }
 
 .description__text {
@@ -716,6 +717,8 @@ html, body {
   border-radius: 10px;
  
 }
+
+
 
 .description__btn-AI  {
   align-self: flex-start;
@@ -774,7 +777,7 @@ html, body {
   font-weight: 500;
   color: #ffffff;
   margin: 0;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
   padding-top: 100px;
 }
 
@@ -1098,6 +1101,7 @@ html, body {
 
   .description__title {
     text-align: center;
+    color: #ffffff;
   }
 
   .description__list {
