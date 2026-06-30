@@ -8,15 +8,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./Images/Logo.png">
 </head>
 <body>
-   <header class="header" id="header">
-        <div class="container">
-            <div class="header__logo">
-              <a href="/">
-              <img class="header_img-logo" src="./Images/Logo.png" alt="logo">
-              </a>
-              <a href="/" class="header_text">Vroves</a>
-
-            </div>
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__logo">
+        <a href="/">
+          <img class="header_img-logo" src="./Images/Logo.png" alt="logo">
+        </a>
+        <a href="/" class="header_text">Vroves</a>
+      </div>
 
             <nav class="header__nav">
               <ul class="header__list">
@@ -33,7 +32,7 @@
 
             <a href="mailto:support@vroves.com" class="btn">Get Consultation</a>
         </div>
-    </header>
+  </header>
 
     <main class="main">
       <section class="welcome" id="welcome">
@@ -98,9 +97,9 @@
             <a href="AIML.html" class="services__btn">Learn More</a>
          </div>
     </div>
-</section>
+  </section>
 
-<section id="feedback" class="feedback">
+ <section id="feedback" class="feedback">
     <div class="container">
         <h2 class="feedback__title">Expert Video Technology Consulting</h2>
         <h3 class="engineering-headline">Engineering Excellence. Delivered with Trust.</h3>
@@ -143,9 +142,9 @@
           </div>
         </div>
     </div>
-</section>
+ </section>
 
-<section class="wcu-section">
+ <section class="wcu-section">
 
   <div class="wcu-header">
     <h2 class="wcu-title">Why Companies Choose Us</h2>
@@ -183,25 +182,25 @@
     <a href="mailto:support@vroves.com" class="wcu-cta">Get in touch <span>→</span></a>
   </div>
 
-</section>
+ </section>
 
 
-<section id="section" class="section">
+ <section id="section" class="section">
   <div class="container">
     <p class="section__text">Vroves, founded in 2016, as a research and development company</p>
   </div>
-</section>
+ </section>
 
-<section class="info">
+ <section class="info">
   <div class="container">
     <div class="container__text">
       <p class="info__text">At the beginning our focus was outsourcing in all possible areas of the software developments fields. We are an agile company. Customers satisfaction is our main goal. We always deliver high quality solution to the customers. Our team is distributed around the globe what allows us to work nearly 24/7. We have teammates at the following locations:</p>
     </div>
     <img src="./Images/play-button-media-player-podcast-graphic.jpg" alt="img" class="info__img">
   </div>
-</section>
+ </section>
 
-<footer class="footer">
+ <footer class="footer">
     <div class="container">
       <div class="footer__contacts">
         <a href="/">
@@ -216,7 +215,7 @@
            <a class="footer__socials-icon" href="https://x.com/vrovesc"><img src="./Images/twitter.png" alt=""></a>
            <a class="footer__socials-icon" href="https://www.linkedin.com/company/vroves?_l=ru_RU"><img src="./Images/linkedin.png" alt=""></a>
           </div>
-  </div>
+    </div>
       </div>
       <nav class="footer__nav">
         <ul class="footer__list">
@@ -247,48 +246,264 @@
           </li>
         </ul>
       </nav>
-      <div class="footer__cocials">
-        <p class="footer__title">Social networks</p>
-        <div class="footer__socials-icons"></div>
-         <a class="footer__socials-icon" href="https://www.facebook.com/vroves"><img src="./Images/facebook.png" alt=""></a>
-         <a class="footer__socials-icon" href="https://x.com/vrovesc"><img src="./Images/twitter.png" alt=""></a> 
-         <a class="footer__socials-icon" href="https://www.linkedin.com/company/vroves"><img src="./Images/linkedin.png" alt=""></a>  
-        </div>
-      </div>
     </div>
   </footer>
 
-<script>
+  <div class="privacy__policy">
+     <p>Copyright © 2016-2026 Vroves: Video Compression Guru</p>
+   <div class="privacy-links">
+     <a href="/Privacy Policy.html">Privacy Policy</a>
+    </div>
+  </div>
 
-const btn = document.getElementById("scrollTopBtn");
-const services = document.getElementById("services");
-const productsLink = document.querySelector('a[href="#services"]');
+ <script>
 
-let clickedProducts = false;
-
-if (productsLink) { // ← добавь эту проверку
-  productsLink.addEventListener("click", function () {
-    clickedProducts = true;
-    btn.classList.add("show");
-  });
+ const btn = document.getElementById("scrollTopBtn");
+ const services = document.getElementById("services");
+ const productsLink = document.querySelector('a[href="#services"]');
+ 
+ let clickedProducts = false;
+ 
+ if (productsLink) { // ← добавь эту проверку
+   productsLink.addEventListener("click", function () {
+     clickedProducts = true;
+     btn.classList.add("show");
+   });
+ }
+ 
+ window.addEventListener("scroll", function () {
+   if (!services) return; // ← защита если services тоже нет на странице
+   const triggerPoint = services.offsetTop;
+ 
+   if (clickedProducts || window.scrollY > triggerPoint) {
+     btn.classList.add("show");
+   } else {
+     btn.classList.remove("show");
+   }
+ });
+ 
+ btn.addEventListener("click", function () {
+   window.scrollTo({ top: 0, behavior: "smooth" });
+ });
+ </script>
+ <!-- Минималистичные куки — HTML Widget для Elementor (футер / Theme Builder)
+     Показ через 10 сек; блокировка скролла и кликов по сайту; появляется при каждом открытии. -->
+<style>
+.umi-cookie-notice {
+  --umi-graphite: #1a1c1e;
+  --umi-blue: #0057ff;
+  --umi-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --umi-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
-window.addEventListener("scroll", function () {
-  if (!services) return; // ← защита если services тоже нет на странице
-  const triggerPoint = services.offsetTop;
+.umi-cookie-notice[hidden] {
+  display: none !important;
+}
+.umi-cookie-notice {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: clamp(0.75rem, 3vw, 1.25rem);
+  padding-bottom: max(clamp(0.75rem, 3vw, 1.25rem), env(safe-area-inset-bottom));
+  font-family: var(--umi-font);
+  pointer-events: none;
+}
 
-  if (clickedProducts || window.scrollY > triggerPoint) {
-    btn.classList.add("show");
-  } else {
-    btn.classList.remove("show");
+.umi-cookie-notice__overlay {
+  position: absolute;
+  inset: 0;
+ 
+
+  opacity: 0;
+  transition: opacity 0.38s var(--umi-ease);
+  cursor: default;
+}
+.umi-cookie-notice--visible .umi-cookie-notice__overlay {
+  opacity: 1;
+}
+.umi-cookie-notice--closing .umi-cookie-notice__overlay {
+  opacity: 0;
+}
+.umi-cookie-notice__bar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: min(calc(100% - 1.5rem), 60rem);
+  padding: 0.85rem 0.85rem 0.85rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 250, 0.96));
+  box-shadow: 0 12px 40px rgba(26, 28, 30, 0.18), 0 0 0 1px rgba(0, 87, 255, 0.06);
+  color: var(--umi-graphite);
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity 0.38s var(--umi-ease), transform 0.38s var(--umi-ease);
+  pointer-events: auto;
+}
+.umi-cookie-notice--visible .umi-cookie-notice__bar {
+  opacity: 1;
+  transform: translateY(0);
+}
+.umi-cookie-notice--closing .umi-cookie-notice__bar {
+  opacity: 0;
+  transform: translateY(0.5rem);
+}
+.umi-cookie-notice__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: rgba(0, 87, 255, 0.1);
+  color: var(--umi-blue);
+}
+.umi-cookie-notice__text {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: clamp(0.8125rem, 2vw, 0.875rem);
+  line-height: 1.5;
+  color: rgba(26, 28, 30, 0.78);
+}
+.umi-cookie-notice__link {
+  color: var(--umi-blue);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-color: rgba(0, 87, 255, 0.35);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+.umi-cookie-notice__link:hover,
+.umi-cookie-notice__link:focus-visible {
+  color: #003dcc;
+  text-decoration-color: currentColor;
+  outline: none;
+}
+.umi-cookie-notice__link:focus-visible {
+  outline: 2px solid var(--umi-blue);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+.umi-cookie-notice__ok {
+  flex-shrink: 0;
+  min-height: 2.35rem;
+  padding: 0.5rem 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  background: linear-gradient(115deg, #003dcc, var(--umi-blue) 45%, #1a74ff);
+  box-shadow: 0 6px 20px rgba(0, 87, 255, 0.28);
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: transform 0.3s var(--umi-ease), box-shadow 0.3s var(--umi-ease), filter 0.3s var(--umi-ease);
+}
+.umi-cookie-notice__ok:hover,
+.umi-cookie-notice__ok:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 26px rgba(0, 87, 255, 0.38);
+  filter: brightness(1.05);
+  outline: none;
+}
+.umi-cookie-notice__ok:focus-visible {
+  outline: 2px solid var(--umi-graphite);
+  outline-offset: 3px;
+}
+.umi-cookie-notice__close {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  
+  color: rgba(26, 28, 30, 0.4);
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: background 0.2s ease, color 0.2s ease;
+  padding: 0;
+}
+.umi-cookie-notice__close:hover,
+.umi-cookie-notice__close:focus-visible {
+  background: rgba(26, 28, 30, 0.08);
+  color: rgba(26, 28, 30, 0.85);
+  outline: none;
+}
+.umi-cookie-notice__close:focus-visible {
+  outline: 2px solid var(--umi-blue);
+  outline-offset: 2px;
+}
+@media (max-width: 640px) {
+  .umi-cookie-notice__bar {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.65rem 0.75rem;
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border-radius: 1.1rem;
   }
-});
+  .umi-cookie-notice__ok {
+    width: 100%;
+    min-height: 2.5rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .umi-cookie-notice__overlay,
+  .umi-cookie-notice__bar {
+    transition: opacity 0.2s ease;
+  }
+  .umi-cookie-notice__ok:hover,
+  .umi-cookie-notice__ok:focus-visible {
+    transform: none;
+  }
+}
+</style>
 
-btn.addEventListener("click", function () {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-</script>
+<div
+  class="umi-cookie-notice"
+  id="umiCookieNotice"
+  hidden
+  role="dialog"
+  aria-modal="true"
+  aria-label="Уведомление о cookie"
+>
+  <div class="umi-cookie-notice__overlay" data-umi-cookie-overlay aria-hidden="true"></div>
+  <div class="umi-cookie-notice__bar">
+    <span class="umi-cookie-notice__icon" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M12 8v5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+        <circle cx="12" cy="16.25" r="1.1" fill="currentColor"/>
+      </svg>
+    </span>
+    <p class="umi-cookie-notice__text">
+     This website uses cookies to improve your user experience. Parts of this website may not work as expected without cookies. Learn more about our cookies policy - <a class="umi-cookie-notice__link" href="/Privacy Policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+    </p>
+    <button type="button" class="umi-cookie-notice__ok" id="umiCookieAcceptBtn">Ok</button>
+    <button type="button" class="umi-cookie-notice__close" id="umiCookieCloseBtn" aria-label="Закрыть">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+</div>
 
+<script src="cookie-notice.js"></script>
 
 
 </body>

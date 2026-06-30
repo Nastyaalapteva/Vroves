@@ -63,7 +63,7 @@ const productsLink = document.querySelector('a[href="#services"]');
 
 let clickedProducts = false;
 
-if (productsLink) { // ← добавь эту проверку
+if (productsLink && btn) {
   productsLink.addEventListener("click", function () {
     clickedProducts = true;
     btn.classList.add("show");
@@ -71,7 +71,7 @@ if (productsLink) { // ← добавь эту проверку
 }
 
 window.addEventListener("scroll", function () {
-  if (!services) return; // ← защита если services тоже нет на странице
+  if (!services || !btn) return;
   const triggerPoint = services.offsetTop;
 
   if (clickedProducts || window.scrollY > triggerPoint) {
@@ -81,13 +81,15 @@ window.addEventListener("scroll", function () {
   }
 });
 
-btn.addEventListener("click", function () {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+if (btn) {
+  btn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
 </script>
 
 
 
 
-
+<script src="cookie-notice.js"></script>
 </body>
