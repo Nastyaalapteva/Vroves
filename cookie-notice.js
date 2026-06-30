@@ -210,7 +210,7 @@
       </svg>
     </span>
     <p class="umi-cookie-notice__text">
-     This website uses cookies to improve your user experience. Parts of this website may not work as expected without cookies. Learn more about our cookies policy - <a class="umi-cookie-notice__link" href="/Privacy Policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+     This website uses cookies to improve your user experience. Parts of this website may not work as expected without cookies. Learn more about our cookies policy - <a class="umi-cookie-notice__link" href="/Privacy_Policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
     </p>
     <button type="button" class="umi-cookie-notice__ok" id="umiCookieAcceptBtn">Ok</button>
     <button type="button" class="umi-cookie-notice__close" id="umiCookieCloseBtn" aria-label="Close">
